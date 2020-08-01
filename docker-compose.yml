@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  lambda:
+    build: .
+    environment:
+      - PYTHONPATH=/var/task/src:/var/task/lib
+      - PATH=/var/task/bin:$PATH
+      - SKEDDA_VENUE_NAME=sennahillstenniscourt
+      - SKEDDA_USERNAME=sherryshen@gmail.com
+      - SKEDDA_PASSWORD=Penpen4402
+    volumes:
+      - ./src/:/var/task/src/

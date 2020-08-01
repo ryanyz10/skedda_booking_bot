@@ -1,0 +1,5 @@
+bin/
+build/
+.venv/
+.vscode/
+build.zip

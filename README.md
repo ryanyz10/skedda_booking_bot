@@ -6,6 +6,9 @@ It is deployed as an AWS Lambda function triggered by a cron job.
 
 Big thanks to the [PyChromeless](https://github.com/21Buttons/pychromeless) repo for help in getting the Lambda Docker image setup for a webscraper.
 
+## Credentials
+The credentials are stored as environment variables `SKEDDA_VENUE_NAME`, `SKEDDA_USERNAME` and `SKEDDA_PASSWORD`. These should be fairly self-explanatory.
+
 ## Running
 First, make sure to install the dependencies with `pip3 install -r requirements.txt`. 
 

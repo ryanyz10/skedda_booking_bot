@@ -1,6 +1,6 @@
 # Skedda Booking Bot
 ## About
-The tennis courts in my neighborhood are booked using a site called Skedda. Skedda opens bookings exactly 7 days in advance, meaning if I want to the prime times between 7-8pm, I need to get on a week before exactly at 7pm. This can get tedious and difficult to remember so I wrote this bot to do it for me.
+The tennis courts in my neighborhood are booked using a site called Skedda. Skedda opens bookings exactly 7 days in advance meaning if I want to play during the prime times between 7-8pm, I need to get on exactly a week before at 7pm. This can get tedious and difficult to remember so I wrote this bot to do it for me.
 
 It is deployed as an AWS Lambda function triggered by a cron job.
 

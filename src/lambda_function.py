@@ -166,7 +166,7 @@ def book(driver, td_num):
         "//a[contains(@class, 'dropdown-item')]")[6].click()
 
     driver.find_elements_by_xpath(
-        "//button[contains(@class, 'btn-success')]")[1].click()
+        "(//button[contains(@class, 'btn-success')]")[2].click()
 
     try:
         WebDriverWait(driver, 5).until(EC.presence_of_element_located(

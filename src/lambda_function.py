@@ -116,8 +116,8 @@ def get_booked_times(driver):
 
     for booking_text in booking_texts:
         start, end = booking_text.text.split('–')
-        start = datetime.datetime.strptime(start, "%I:%M %p")
-        end = datetime.datetime.strptime(end, "%I:%M %p")
+        start = datetime.datetime.strptime(start, "%I:%M %p").time()
+        end = datetime.datetime.strptime(end, "%I:%M %p").time()
 
         booking_times.append((start, end))
 
@@ -131,7 +131,7 @@ def get_earliest_booking_time(booked_times):
     # the booked times should already be sorted, and there should also be no overlaps
     # find the earliest time of 7, 7:30, 8 to book
     to_book = datetime.time(hour=19, minute=0)
-    for (_, end) in booked_times:
+    for (start, end) in booked_times:
         if end.hour < 19 or end.hour > 20:
             continue
 
@@ -166,7 +166,7 @@ def book(driver, td_num):
         "//a[contains(@class, 'dropdown-item')]")[6].click()
 
     driver.find_elements_by_xpath(
-        "(//button[contains(@class, 'btn-success')]")[2].click()
+        "(//button[contains(@class, 'btn-success')]")[1].click()
 
     try:
         WebDriverWait(driver, 5).until(EC.presence_of_element_located(
